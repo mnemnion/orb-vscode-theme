@@ -1,0 +1,36 @@
+{
+    "name": "orb",
+    "displayName": "orb",
+    "description": "Orb: a metalanguage multitool.",
+    "version": "0.0.1",
+    "publisher": "mnemnion",
+    "engines": {
+        "vscode": "^1.21.0"
+    },
+    "categories": [
+        "Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "orb",
+                "aliases": [
+                    "Orb",
+                    "orb"
+                ],
+                "extensions": [
+                    ".orb",
+                    ".gm"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "orb",
+                "scopeName": "source.orb",
+                "path": "./syntaxes/orb.tmLanguage.json"
+            }
+        ]
+    }
+}

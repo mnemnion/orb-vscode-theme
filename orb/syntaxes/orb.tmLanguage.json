@@ -1,0 +1,43 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Orb",
+	"patterns": [
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#luablocks"
+		}
+		{
+			"include": "#orbblocks"
+		}
+	],
+	"repository": {
+		"strings": {
+			"name": "string.quoted.double.orb",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.orb",
+					"match": "\\\\."
+				}
+			]
+		},
+		"luablocks": {
+			"begin" : "#!lua",
+			"end"  :  "#/lua",
+			"patterns": [{
+				"include" : "source.lua"
+			}]
+		},
+		"orbblocks" : {
+			"begin" : "#!+orb",
+			"end"   : "#/+orb",
+			"patterns" : [{
+				"include" : "self"
+			}]
+		}
+	},
+	"scopeName": "source.orb"
+}
